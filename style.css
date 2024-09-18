@@ -1,0 +1,212 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.main{
+    background-image: url(./back.jpg);
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+}
+.container{
+    display: flex;
+    justify-content:space-between;
+    width: 100%;
+    align-items: center;
+    padding: 10px;
+  
+}
+.logo{
+    width: 10%;
+}
+.logo img{
+    width: 100%;
+   
+}
+.navbar{
+    display: flex;
+    align-items: center;
+}
+.navbar ul{
+    display: flex;
+    list-style: none;
+    gap: 20px;
+        
+
+}
+.navbar ul a{
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+    color: whitesmoke;
+}
+.navbar ul :hover{
+    color: rgb(254, 0, 0);
+}
+
+.second{
+    display: flex;
+    align-items: center;
+
+}
+.second ul{
+    display: flex;
+   list-style: none;
+   gap: 20px;
+    
+}
+.second button{
+    padding: 11px 17px;
+    background-color: black;
+    border: none;
+}
+.second ul a{
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+    color: whitesmoke;
+   
+}
+.second button:hover{
+        background-color: red;
+}
+
+.content{
+    color: white;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 70vh;
+    padding-left: 18px;
+    font-family: 'Poppins';
+}
+span{
+    color: red;
+}
+.content button a{
+    text-decoration: none;
+    color: black;
+}
+.content button{
+    width: 10%;
+    margin-top: 20px;
+    border-radius: 4px;
+    padding: 8px 6px;
+    font-family: 'Poppins';
+    
+    cursor: pointer;
+    list-style: none;
+}
+.content p{
+ margin-top: 15px;
+ word-spacing: 2px;
+}
+
+@media only screen and (max-width: 600px) {
+    .main {
+      width: 100%;
+      background-size: cover;
+      background-position: center;
+      background-position: right;
+      height: 100vh;
+    }
+    .container{
+        display: flex;
+        flex-direction: column;
+        z-index: 999999909099;
+        position: relative;
+        background-color: black;
+        border: 1px dashed gold;
+
+    }
+    .logo{
+        width: 20%;
+    }
+    .navbar ul{
+        display: flex;
+        border-bottom: 1px solid rgb(37, 37, 37);
+    }
+    .container button{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .content{
+        display: flex;
+        flex-direction: column;
+    }
+    .content p{
+        font-size: 12px;
+    }
+
+    .content button{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      width: 33%;
+    }
+    
+  }
+
+/* Style for the hamburger menu */
+.hamburger {
+    display: none;
+    font-size: 30px;
+    cursor: pointer;
+    position: absolute;
+    width: 30px;
+    left: 10px;
+    top: 22px;
+
+}
+
+/* Responsive Design */
+@media only screen and (max-width: 1000px) {
+    .navbar {
+        display: none; /* Hide the navbar links on smaller screens */
+    }
+    .second {
+        display: none; /* Hide the buttons on smaller screens */
+    }
+    .hamburger {
+        display: block; 
+background-color: transparent;
+color: #11a372;
+top: 10px;
+    }
+    #navbarMenu {
+        display: none;
+        flex-direction: column;
+     
+    }
+    #navbarMenu ul {
+        display: flex;
+        flex-direction: column;
+        background-color: transparent;
+        border: 2px solid transparent;
+        color: white;
+        width: 100%;
+       
+    }
+    #navbarMenu ul li {
+        margin: 10px 0;
+
+
+    }
+    #secondSection {
+        display: none;
+    }
+}
+
+@media only screen and (min-width: 1001px) {
+    .hamburger {
+        display: none; /* Hide the hamburger menu on larger screens */
+    }
+    .navbar {
+        display: flex; /* Show the navbar links on larger screens */
+    }
+    .second {
+        display: flex; /* Show the buttons on larger screens */
+    }
+}
